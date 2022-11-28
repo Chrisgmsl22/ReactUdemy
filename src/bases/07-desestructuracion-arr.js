@@ -24,9 +24,21 @@ console.log(letra, numero);
 //1. el primer valor del arreglo se llamará nombre
 //2. se llamará setNombre 
 const usarEstate = (valor) => {
-    return [valor, ()=>{console.log('HM')}];
+    return [valor, ()=>{console.log('HM usando:', valor)}];
 }
 
 const [nombre, setNombre] = usarEstate('GK');
 console.log(nombre);
 setNombre();
+
+//Ejercicio propio
+const usarEjemplo = (param) => {
+    return [param, ()=>{console.log(`Segundo: ${param}`)}];
+    
+}
+
+//Para desestructurizar un arreglo:
+const [param1, param2] = usarEjemplo('arg');
+
+console.log(param1);
+console.log(param2);
